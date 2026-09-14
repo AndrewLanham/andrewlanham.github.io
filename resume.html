@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>resume — [YOUR NAME]</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<style>
+  /* SIGNATURE — HANGING LABEL GRID.
+     Every row carries its label in a fixed left column, so the page reads
+     as one continuous ruled sheet. Used on this page only. */
+  .cv{padding:64px 0 40px;}
+  .cv .row{
+    display:grid; grid-template-columns:108px 1fr; gap:0 32px;
+    padding:22px 0; border-top:1px solid var(--line);
+  }
+  .cv .row:first-of-type{border-top:none;}
+  .cv .label{
+    font-family:var(--mono); font-size:11px; letter-spacing:0.08em;
+    color:var(--accent); text-transform:uppercase; padding-top:5px;
+  }
+  .cv h3{font-size:1.02rem; font-weight:500; margin-bottom:2px;}
+  .cv .meta{font-family:var(--mono); font-size:12px; color:var(--muted); margin-bottom:10px;}
+  .cv p{color:var(--muted); font-size:0.96rem; max-width:62ch; margin-bottom:10px;}
+  .cv ul{color:var(--muted); font-size:0.96rem; max-width:62ch; margin:0 0 10px 18px;}
+  .cv li{margin-bottom:6px;}
+  .cv li strong, .cv p strong{color:var(--text); font-weight:500;}
+  .cv .item + .item{margin-top:22px;}
+
+  .cv-head{padding:96px 0 36px;}
+  .cv-head h1{font-size:clamp(1.9rem,4.5vw,2.6rem); font-weight:500; margin-bottom:10px;}
+  .cv-head .tagline{color:var(--muted); max-width:58ch; margin-bottom:20px;}
+  .cv-head .line{
+    font-family:var(--mono); font-size:12.5px; color:var(--muted);
+    display:flex; flex-wrap:wrap; gap:6px 18px;
+  }
+  .cv-head .line a{color:var(--muted);}
+  .cv-head .line a:hover{color:var(--accent);}
+
+  .getpdf{
+    margin-top:26px; font-family:var(--mono); font-size:12px;
+    display:flex; gap:18px; flex-wrap:wrap;
+  }
+  .getpdf a{color:var(--accent);}
+
+  @media (max-width:640px){
+    .cv .row{grid-template-columns:1fr; gap:0;}
+    .cv .label{padding-top:0; margin-bottom:10px;}
+  }
+
+  /* PRINT — one page on white. Cmd/Ctrl-P produces the PDF. */
+  @media print{
+    @page{size:letter; margin:14mm 16mm;}
+    html, body{background:#fff !important; color:#111 !important; font-size:10pt; line-height:1.42;}
+    nav, footer, .getpdf, .noprint{display:none !important;}
+    a{color:#111 !important; text-decoration:none;}
+    .wrap{max-width:none; padding:0;}
+    .cv-head{padding:0 0 12pt;}
+    .cv-head h1{font-size:19pt; margin-bottom:4pt;}
+    .cv-head .tagline{color:#333 !important; max-width:none; margin-bottom:7pt; font-size:10pt;}
+    .cv-head .line{color:#444 !important; font-size:8.6pt; gap:3pt 12pt;}
+    .cv-head .line a{color:#444 !important;}
+    .cv{padding:0;}
+    .cv .row{
+      grid-template-columns:78pt 1fr; gap:0 14pt;
+      padding:9pt 0; border-top:0.5pt solid #bbb;
+      break-inside:avoid; page-break-inside:avoid;
+    }
+    .cv .label{color:#111 !important; font-size:7.6pt; padding-top:2pt;}
+    .cv h3{font-size:10.5pt; margin-bottom:1pt;}
+    .cv .meta{color:#555 !important; font-size:8.6pt; margin-bottom:4pt;}
+    .cv p, .cv ul{color:#222 !important; font-size:9.4pt; max-width:none; margin-bottom:4pt;}
+    .cv li{margin-bottom:2pt;}
+    .cv li strong, .cv p strong{color:#000 !important; font-weight:600;}
+    .cv .item + .item{margin-top:8pt;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="mark"><a href="index.html">[YOUR NAME]</a></div>
+    <div class="links">
+      <a href="work.html">work</a>
+      <a href="sound.html">sound</a>
+      <a href="index.html#about">about</a>
+      <a href="resume.html" class="here">resume</a>
+      <a href="contact.html">contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="cv-head">
+  <div class="wrap">
+    <h1>[YOUR NAME]</h1>
+    <p class="tagline">[One line: what you do and what you're looking for. e.g. Electrical engineer, quantum hardware and RF systems. Open to technical program management, applications engineering, solutions roles.]</p>
+    <div class="line">
+      <a href="mailto:[email protected]">[email@domain.com]</a>
+      <span>[CITY, STATE]</span>
+      <a href="#">[linkedin.com/in/you]</a>
+      <a href="index.html">[yoursite.com]</a>
+    </div>
+    <div class="getpdf">
+      <a href="resume.pdf">download pdf</a>
+    </div>
+  </div>
+</div>
+
+<div class="cv">
+  <div class="wrap">
+
+    <div class="row">
+      <div class="label">Experience</div>
+      <div>
+        <div class="item">
+          <h3>[TITLE] · Quantum computing research</h3>
+          <div class="meta">[UARC / FFRDC NAME] · [CITY] · [20XX–20XX]</div>
+          <ul>
+            <li>[What you built or measured, with the number that makes it real.]</li>
+            <li>[Second line. Scope: how many people, whose hardware, what schedule.]</li>
+            <li>[Sponsor reviews, publications, hand-offs to other groups.]</li>
+          </ul>
+        </div>
+        <div class="item">
+          <h3>Engineering lead · Hardware redesign</h3>
+          <div class="meta">[COFFEE SYSTEMS COMPANY] · [CITY] · [20XX–20XX]</div>
+          <ul>
+            <li>Led the conversion of a keg-based commercial dispensing system to a <strong>post-mix architecture</strong>, dropping the minimum viable deployment from <strong>250+ unit</strong> buildings to <strong>50+</strong>.</li>
+            <li>[What you specified: pumps, valves, controller, enclosure, vendor and tooling decisions.]</li>
+            <li>[Working between the deployment side and manufacturing — how many people, what cadence.]</li>
+          </ul>
+        </div>
+        <div class="item">
+          <h3>[TITLE] · Wireless communication</h3>
+          <div class="meta">[COMPANY / LAB] · [CITY] · [20XX–20XX]</div>
+          <ul>
+            <li>[What you owned — RF front end, link budgets, protocol work, test automation.]</li>
+            <li>[Result with a number.]</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="label">Education</div>
+      <div>
+        <div class="item">
+          <h3>MSEE, Electrical Engineering</h3>
+          <div class="meta">[UNIVERSITY] · [20XX]</div>
+          <p>[Focus area, thesis title if it's relevant to the work you want.]</p>
+        </div>
+        <div class="item">
+          <h3>BSEE, Electrical Engineering</h3>
+          <div class="meta">[UNIVERSITY] · [20XX]</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="label">Patent</div>
+      <div>
+        <p><strong>[US XX,XXX,XXX]</strong> — [One sentence on what it does and what problem it solves.]</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="label">Publications</div>
+      <div>
+        <ul>
+          <li>[Authors]. "[Title]." <em>[Venue]</em>, [20XX].</li>
+          <li>[Authors]. "[Title]." <em>[Venue]</em>, [20XX].</li>
+          <li>[Authors]. "[Title]." <em>[Venue]</em>, [20XX].</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="label">Tools</div>
+      <div>
+        <p><strong>Hardware</strong> — [instruments, test gear, fab or assembly processes, CAD.]</p>
+        <p><strong>Software</strong> — [languages, simulation, data analysis, whatever you actually use weekly.]</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="label">Music</div>
+      <div>
+        <div class="item">
+          <h3>[ARTIST / LABEL NAME]</h3>
+          <div class="meta">DJ, percussion, label · 2019–present</div>
+          <p>[One sentence. Releases, rooms, the channel. Details live on the <a href="sound.html">sound page</a>.]</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="contact-links">
+      <a href="mailto:[email protected]">email</a>
+      <a href="contact.html">contact</a>
+      <a href="resume.pdf">resume (pdf)</a>
+    </div>
+    <div class="fineprint">[YOUR NAME] · built and hosted for $0</div>
+  </div>
+</footer>
+
+</body>
+</html>

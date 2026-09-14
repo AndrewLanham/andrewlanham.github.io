@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[YOUR NAME]</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<style>
+  /* SIGNATURE TIMELINE — spaced-letter treatment, used once, on this page only */
+  section.timeline{padding:40px 0 80px; border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  section.timeline .row{
+    display:flex; justify-content:space-between; align-items:baseline;
+    padding:14px 0; border-bottom:1px solid var(--line);
+    font-family:var(--mono); font-size:13px;
+  }
+  section.timeline .row:last-child{border-bottom:none;}
+  section.timeline .role{
+    letter-spacing:0.14em;
+    color:var(--text);
+  }
+  section.timeline .org{color:var(--muted); flex:1; text-align:right; margin-right:24px;}
+  section.timeline .yr{color:var(--accent); min-width:80px; text-align:right;}
+
+  @media (max-width:640px){
+    section.timeline .row{flex-direction:column; align-items:flex-start; gap:4px;}
+    section.timeline .org{text-align:left; margin-right:0;}
+    section.timeline .yr{text-align:left;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="mark"><a href="index.html">[YOUR NAME]</a></div>
+    <div class="links">
+      <a href="work.html">work</a>
+      <a href="sound.html">sound</a>
+      <a href="#about">about</a>
+      <a href="resume.html">resume</a>
+      <a href="contact.html">contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>I built this page to bring more than just a resume to the discussion.</h1>
+  </div>
+</header>
+
+<section class="block">
+  <div class="wrap">
+    <p>I trained as an engineer and as a musician because the languages of mathematics and music are more universal than the ones we speak. I worked in wireless communication because it fascinated me to speak the language of nature, to send my words through the air and into wires until they could reach my grandmother's home in rural Italy. I worked in quantum computing because it felt like the base language of reality, a mysterious deviation from the world we see. I led a coffee company's hardware redesign because it meant translating between the language of engineering and the language of business — what a room full of people actually needed versus what could be built and sold. I use percussion to speak musically. Percussion is broad and non-linear, more universal than any other musical layer. It's integrated across the world in the deeply human act of dance, its own physical language. The languages of connection are what it's all for, for me.</p>
+  </div>
+</section>
+
+<section class="block" id="work">
+  <div class="wrap">
+    <h2>case study — the redesign</h2>
+    <p class="lede">Converting a keg-based commercial coffee system to post-mix, and unlocking a market five times larger.</p>
+    <p>One concrete example: I came on as engineering lead for a small partnership redesigning commercial beverage dispensing hardware. The existing system was keg-based — nitrogen tanks, pressure-fed tubing — which only worked in buildings of <strong>250–300+ units</strong>: office towers, large apartment complexes, airports.</p>
+    <p>Working directly between the people who understood the deployment problem and the manufacturing constraints, I led the redesign to a <strong>post-mix architecture</strong> — concentrate brewed and mixed on the spot, in a smaller form factor. That single change dropped the minimum viable deployment down to <strong>50+ unit buildings</strong>: small apartments, banks, doctor's offices — an addressable market roughly five times larger than before.</p>
+    <div class="stat-row">
+      <div class="stat"><span class="num">5x</span><span class="label">addressable market</span></div>
+      <div class="stat"><span class="num">250→50</span><span class="label">min. unit size unlocked</span></div>
+    </div>
+    <div class="links-row">
+      <a href="work.html">full work history →</a>
+    </div>
+  </div>
+</section>
+
+<section class="block alt">
+  <div class="wrap">
+    <h2>for the record</h2>
+    <p>[TOP-10 UNIVERSITY] — BSEE, MSEE. [X years] doing quantum computing research at [UARC / FFRDC NAME]: sponsor-backed work, site reviews, a publication record. One patent, on [what it actually does — one honest sentence, not just the word "patent"].</p>
+  </div>
+</section>
+
+<section class="block" id="sound">
+  <div class="wrap">
+    <h2>the sound</h2>
+    <p class="lede">Music is where that search for connection actually lands.</p>
+    <p>[A few plain sentences about your music practice — what you make, where you've released, what the DJ sets are like. Keep it concrete: rooms you've played, what the sets sound like, what the label puts out. Not aspirational language.]</p>
+    <div class="embeds">
+      <div class="embed-slot">// embed a SoundCloud or YouTube player here — paste their iframe embed code in place of this block</div>
+    </div>
+    <div class="links-row">
+      <a href="sound.html">sets, releases, label →</a>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="about">
+  <div class="wrap">
+    <p>None of this happens in a vacuum. I care more about meeting people across genuinely different backgrounds than most of tech culture does — a lot of my closest friends don't have a college degree, which is unusual in these circles, and it's never felt like a gap to me.</p>
+    <p>If a technical mission came along that I actually believed in, I'd be fully in on it. I just haven't found one yet. In the meantime I'd rather work on something concrete and useful — build it, ship it, get paid fairly for real work — than perform enthusiasm I don't feel.</p>
+  </div>
+</section>
+
+<section class="timeline">
+  <div class="wrap">
+    <div class="row">
+      <span class="role">Q U A N T U M&nbsp;&nbsp;R E S E A R C H</span>
+      <span class="org">[UARC / FFRDC NAME]</span>
+      <span class="yr">[20XX–20XX]</span>
+    </div>
+    <div class="row">
+      <span class="role">E N G I N E E R I N G&nbsp;&nbsp;L E A D</span>
+      <span class="org">[COFFEE SYSTEMS COMPANY]</span>
+      <span class="yr">[20XX–20XX]</span>
+    </div>
+    <div class="row">
+      <span class="role">L A B E L&nbsp;&nbsp;/&nbsp;&nbsp;D J</span>
+      <span class="org">[YOUR ARTIST / LABEL NAME]</span>
+      <span class="yr">2019–present</span>
+    </div>
+    <div class="row">
+      <span class="role">Y O U T U B E</span>
+      <span class="org">[YOUR YOUTUBE CHANNEL NAME]</span>
+      <span class="yr">[20XX–present]</span>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <h2>Let's talk.</h2>
+    <p>[One line inviting the right kind of conversation — e.g. open to technical program management, applications engineering, or solutions-facing roles.]</p>
+    <div class="contact-links">
+      <a href="mailto:[email protected]">email</a>
+      <a href="#">linkedin</a>
+      <a href="resume.pdf">resume (pdf)</a>
+      <a href="contact.html">contact page</a>
+    </div>
+    <div class="fineprint">[YOUR NAME] · built and hosted for $0</div>
+  </div>
+</footer>
+
+</body>
+</html>

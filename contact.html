@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>contact — [YOUR NAME]</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<style>
+  /* SIGNATURE — CHANNEL ROWS.
+     Each channel is a full-width rule with an accent arrow that steps right
+     on hover. Used on this page only. */
+  .channels{margin-top:8px; border-top:1px solid var(--line);}
+  .channels a.ch{
+    display:grid; grid-template-columns:28px 140px 1fr;
+    align-items:baseline; gap:0 16px;
+    padding:20px 0; border-bottom:1px solid var(--line);
+    font-family:var(--mono); font-size:13.5px; color:var(--text);
+  }
+  .channels a.ch .arrow{
+    color:var(--accent);
+    transition:transform 140ms ease;
+  }
+  .channels a.ch:hover{color:var(--text);}
+  .channels a.ch:hover .arrow{transform:translateX(5px);}
+  .channels a.ch .what{color:var(--muted);}
+  .channels a.ch:hover .what{color:var(--accent);}
+  .channels a.ch .who{color:var(--muted); font-size:12px;}
+
+  .note{
+    margin-top:44px; padding:20px 22px;
+    border:1px solid var(--line); border-left:2px solid var(--accent);
+    border-radius:2px;
+    color:var(--muted); font-size:0.98rem; max-width:58ch;
+  }
+
+  @media (max-width:640px){
+    .channels a.ch{grid-template-columns:22px 1fr; gap:0 12px;}
+    .channels a.ch .who{grid-column:2; margin-top:4px;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .channels a.ch .arrow{transition:none;}
+    .channels a.ch:hover .arrow{transform:none;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="mark"><a href="index.html">[YOUR NAME]</a></div>
+    <div class="links">
+      <a href="work.html">work</a>
+      <a href="sound.html">sound</a>
+      <a href="index.html#about">about</a>
+      <a href="resume.html">resume</a>
+      <a href="contact.html" class="here">contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">contact</div>
+    <h1>Let's talk.</h1>
+    <p class="sub">[One line inviting the right kind of conversation — the roles you want, the projects you'd take, or the bookings you're open to. Say what you actually want to hear about.]</p>
+  </div>
+</header>
+
+<section class="block">
+  <div class="wrap">
+    <div class="channels">
+
+      <a class="ch" href="mailto:[email protected]">
+        <span class="arrow">→</span>
+        <span class="what">email</span>
+        <span class="who">[email@domain.com]</span>
+      </a>
+
+      <a class="ch" href="#">
+        <span class="arrow">→</span>
+        <span class="what">linkedin</span>
+        <span class="who">[/in/yourhandle]</span>
+      </a>
+
+      <a class="ch" href="resume.pdf">
+        <span class="arrow">→</span>
+        <span class="what">resume</span>
+        <span class="who">pdf, one page</span>
+      </a>
+
+      <a class="ch" href="#">
+        <span class="arrow">→</span>
+        <span class="what">github</span>
+        <span class="who">[/yourhandle]</span>
+      </a>
+
+      <a class="ch" href="sound.html">
+        <span class="arrow">→</span>
+        <span class="what">bookings</span>
+        <span class="who">sets, releases, label</span>
+      </a>
+
+    </div>
+
+    <div class="note">
+      [Optional: a line on what to expect — response time, timezone, what to include if you're writing about a role. Delete this block if you'd rather leave it bare.]
+    </div>
+  </div>
+</section>
+
+<section class="block alt">
+  <div class="wrap">
+    <h2>elsewhere</h2>
+    <div class="links-row">
+      <a href="#">[YouTube]</a>
+      <a href="#">[SoundCloud]</a>
+      <a href="#">[Instagram]</a>
+      <a href="#">[Bandcamp]</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fineprint">[YOUR NAME] · built and hosted for $0</div>
+  </div>
+</footer>
+
+</body>
+</html>

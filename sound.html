@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>sound — [YOUR NAME]</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<style>
+  /* SIGNATURE — WAVEFORM RULE.
+     A section divider drawn as amplitude bars instead of a hairline.
+     Used on this page only. Static: no animation, nothing to reduce. */
+  .wave{
+    display:flex; align-items:center; gap:3px;
+    height:56px; margin:0;
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    padding:12px 0;
+    overflow:hidden;
+  }
+  .wave i{
+    display:block; flex:1 1 0; min-width:2px;
+    background:var(--accent); opacity:0.32; border-radius:1px;
+  }
+  .wave.dim i{opacity:0.16;}
+
+  .release{
+    display:flex; justify-content:space-between; align-items:baseline; gap:24px;
+    padding:16px 0; border-bottom:1px solid var(--line);
+    font-family:var(--mono); font-size:13px;
+  }
+  .release:last-child{border-bottom:none;}
+  .release .t{color:var(--text);}
+  .release .cat{color:var(--muted); flex:1; text-align:right;}
+  .release .y{color:var(--accent); min-width:56px; text-align:right;}
+
+  .rooms{
+    display:flex; flex-wrap:wrap; gap:8px; margin-top:24px;
+  }
+  .rooms span{
+    font-family:var(--mono); font-size:12px; color:var(--muted);
+    border:1px solid var(--line); padding:6px 10px; border-radius:2px;
+  }
+
+  @media (max-width:640px){
+    .release{flex-direction:column; align-items:flex-start; gap:4px;}
+    .release .cat, .release .y{text-align:left;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="mark"><a href="index.html">[YOUR NAME]</a></div>
+    <div class="links">
+      <a href="work.html">work</a>
+      <a href="sound.html" class="here">sound</a>
+      <a href="index.html#about">about</a>
+      <a href="resume.html">resume</a>
+      <a href="contact.html">contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">sound</div>
+    <h1>Percussion first, and everything built around it.</h1>
+    <p class="sub">[One or two sentences on what you make. Rooms, tempo, the records you reach for. Concrete.]</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="wave" aria-hidden="true">
+    <i style="height:21%"></i><i style="height:21%"></i><i style="height:32%"></i><i style="height:24%"></i><i style="height:36%"></i><i style="height:35%"></i><i style="height:30%"></i><i style="height:44%"></i><i style="height:34%"></i><i style="height:47%"></i><i style="height:38%"></i><i style="height:41%"></i><i style="height:53%"></i><i style="height:68%"></i><i style="height:46%"></i><i style="height:51%"></i><i style="height:66%"></i><i style="height:79%"></i><i style="height:67%"></i><i style="height:61%"></i><i style="height:83%"></i><i style="height:48%"></i><i style="height:80%"></i><i style="height:58%"></i><i style="height:52%"></i><i style="height:51%"></i><i style="height:57%"></i><i style="height:75%"></i><i style="height:51%"></i><i style="height:64%"></i><i style="height:23%"></i><i style="height:19%"></i><i style="height:20%"></i><i style="height:14%"></i><i style="height:13%"></i><i style="height:14%"></i><i style="height:18%"></i><i style="height:43%"></i><i style="height:37%"></i><i style="height:41%"></i><i style="height:35%"></i><i style="height:29%"></i><i style="height:36%"></i><i style="height:31%"></i><i style="height:21%"></i><i style="height:26%"></i><i style="height:29%"></i><i style="height:38%"></i><i style="height:39%"></i><i style="height:32%"></i><i style="height:51%"></i><i style="height:33%"></i><i style="height:43%"></i><i style="height:55%"></i><i style="height:40%"></i><i style="height:52%"></i><i style="height:43%"></i><i style="height:67%"></i><i style="height:73%"></i><i style="height:67%"></i><i style="height:81%"></i><i style="height:60%"></i><i style="height:77%"></i><i style="height:74%"></i><i style="height:74%"></i><i style="height:69%"></i><i style="height:85%"></i><i style="height:89%"></i><i style="height:70%"></i><i style="height:77%"></i><i style="height:52%"></i><i style="height:77%"></i>
+  </div>
+</div>
+
+<section class="block">
+  <div class="wrap">
+    <h2>sets</h2>
+    <p>[What a set sounds like end to end — where it starts, where it goes, how long. If you play a particular room or series regularly, name it and say what that crowd is like.]</p>
+    <div class="embeds">
+      <div class="embed-slot">// paste a SoundCloud or YouTube iframe here — replace this whole div
+      <!-- example:
+      <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=[YOUR TRACK URL]&color=%234affa0&inverse=true&auto_play=false&show_user=true"></iframe>
+      -->
+      </div>
+      <div class="embed-slot">// second set — same treatment, or delete this block</div>
+    </div>
+    <div class="links-row">
+      <a href="#">[SoundCloud]</a>
+      <a href="#">[Mixcloud]</a>
+      <a href="#">[YouTube channel]</a>
+    </div>
+  </div>
+</section>
+
+<section class="block alt">
+  <div class="wrap">
+    <h2>releases</h2>
+    <p class="lede">[One line on the label — what it puts out and who else is on it.]</p>
+    <div class="release">
+      <span class="t">[Artist — Title]</span>
+      <span class="cat">[LABEL · CAT#] · [format]</span>
+      <span class="y">[20XX]</span>
+    </div>
+    <div class="release">
+      <span class="t">[Artist — Title]</span>
+      <span class="cat">[LABEL · CAT#] · [format]</span>
+      <span class="y">[20XX]</span>
+    </div>
+    <div class="release">
+      <span class="t">[Artist — Title]</span>
+      <span class="cat">[LABEL · CAT#] · [format]</span>
+      <span class="y">[20XX]</span>
+    </div>
+    <div class="embeds">
+      <div class="embed-slot">// Bandcamp or Spotify embed for the most recent release — replace this div</div>
+    </div>
+    <div class="links-row">
+      <a href="#">[Label / Bandcamp]</a>
+      <a href="#">[Discogs]</a>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <h2>rooms</h2>
+    <p>[Where you've played. If the list is short, write it as a sentence instead of using the tags below and delete them.]</p>
+    <div class="rooms">
+      <span>[VENUE, CITY]</span>
+      <span>[VENUE, CITY]</span>
+      <span>[VENUE, CITY]</span>
+      <span>[SERIES / RESIDENCY]</span>
+      <span>[FESTIVAL]</span>
+    </div>
+  </div>
+</section>
+
+<section class="block alt">
+  <div class="wrap">
+    <h2>the kit</h2>
+    <p>[What you play and what you play it on. Hardware nouns: the drums, the machines, the sequencer, the room you record in. Detail is welcome here.]</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <h2>Bookings and records.</h2>
+    <p>[One line — what you want to hear from. e.g. bookings, remix work, label submissions, or none of the above.]</p>
+    <div class="contact-links">
+      <a href="mailto:[email protected]">email</a>
+      <a href="#">[Instagram]</a>
+      <a href="contact.html">contact</a>
+    </div>
+    <div class="fineprint">[YOUR NAME] · built and hosted for $0</div>
+  </div>
+</footer>
+
+</body>
+</html>
