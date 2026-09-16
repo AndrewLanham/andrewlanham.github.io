@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>[YOUR NAME]</title>
+<title>Andrew Lanham</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="site.css">
@@ -11,6 +11,10 @@
   /* SIGNATURE TIMELINE — spaced-letter treatment, used once, on this page only */
   section.timeline{padding:40px 0 80px; border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
   section.timeline .wrap{max-width:880px;}
+  section.timeline h2{
+    font-family:var(--mono); font-size:14px; letter-spacing:0.08em;
+    color:var(--accent); margin-bottom:24px;
+  }
   section.timeline .row{
     display:flex; justify-content:space-between; align-items:baseline; gap:20px;
     padding:14px 0; border-bottom:1px solid var(--line);
@@ -30,6 +34,29 @@
   section.timeline .more a{color:var(--muted);}
   section.timeline .more a:hover{color:var(--accent);}
 
+  /* RECORD — hanging mono labels so the credentials scan instead of read */
+  .record .r{
+    display:grid; grid-template-columns:118px 1fr; gap:0 28px;
+    padding:20px 0; border-top:1px solid var(--line);
+  }
+  .record .r:first-child{border-top:none; padding-top:0;}
+  .record .k{
+    font-family:var(--mono); font-size:11px; letter-spacing:0.09em;
+    text-transform:uppercase; color:var(--accent); padding-top:6px;
+  }
+  .record .v{color:var(--muted); max-width:56ch;}
+  .record .v .t{color:var(--text); display:block; margin-bottom:6px;}
+  .record .v strong{color:var(--text); font-weight:500;}
+  .record .v ul{margin:8px 0 0 18px; color:var(--muted);}
+  .record .v li{margin-bottom:7px;}
+  .record .v .note{display:block; margin-top:6px; font-size:0.9rem;}
+  .record .v .item + .item{margin-top:20px;}
+
+  @media (max-width:640px){
+    .record .r{grid-template-columns:1fr; gap:0;}
+    .record .k{padding-top:0; margin-bottom:10px;}
+  }
+
   @media (max-width:820px){
     section.timeline .row{font-size:12px;}
     section.timeline .role{letter-spacing:0.1em;}
@@ -46,7 +73,7 @@
 
 <nav>
   <div class="wrap">
-    <div class="mark"><a href="index.html">[YOUR NAME]</a></div>
+    <div class="mark"><a href="index.html">Andrew Lanham</a></div>
     <div class="links">
       <a href="work.html">work</a>
       <a href="sound.html">sound</a>
@@ -59,23 +86,86 @@
 
 <header class="hero">
   <div class="wrap">
-    <h1>I made this to discuss more than just a resume.</h1>
+    <h1>I made this page to discuss more than just a resume.</h1>
+    <p class="sub">Electrical engineer &mdash; quantum research, embedded firmware, hardware product lead.</p>
+    <div class="credentials">MSEE + BSEE, UT Austin &nbsp;·&nbsp; 9 yrs quantum research &nbsp;·&nbsp; 15+ publications &nbsp;·&nbsp; 1 patent</div>
   </div>
 </header>
 
-<section class="block">
+<section class="block" id="targeting">
   <div class="wrap">
-    <p>Engineering and music are my first vocations because their languages are more universal than the ones we speak. I worked in wireless communication because I was motivated by encoding language into nature to enable distant human connection. I worked in quantum computing because it felt like a mysterious base language of reality with mysteries to uncover. More recently, I led a food and beverage company's hardware redesign because it meant translating between the world of engineering and the language of a customer, bringing me closer to others. I use percussion to speak musically because it encompasses more than any other musical layer and ties intimately to the human physical language of dance and movement. The languages of connection are what it's all for, for me.</p>
-    <p class="lede" style="margin-top:32px; margin-bottom:0;">I don't want to compartmentalize; I want to put it all out there.</p>
+    <h2>what I'm targeting</h2>
+    <p class="lede">Applications engineering.</p>
+    <p>I spent nine years evaluating emerging quantum technology against the claims of its vendors. Since then I've been engineering lead on a commercial hardware product. I designed the architecture and set up the supply and manufacturing chain behind it. That meant talking to customers on one end and manufacturers on the other.</p>
+    <p>Austin or remote preferred</p>
   </div>
 </section>
 
-<section class="block" id="work">
+<section class="block alt" id="mission">
   <div class="wrap">
-    <h2>case study — the redesign</h2>
-    <p class="lede">Converting a keg-based commercial coffee system line to post-mix, unlocking a market five times larger.</p>
-    <p>In early 2025, I came on as engineering lead for a small partnership redesigning commercial beverage dispensing hardware. The existing system was keg-based — nitrogen tanks, pressure-fed tubing — which only worked in buildings of <strong>150+ units</strong>: office towers and large apartment complexes.</p>
+    <h2>mission</h2>
+    <p>Engineering and music were my first vocations because their languages are more universal than the ones we speak. I worked in wireless communication because it encodes language into nature to enable human connection. I worked in quantum computing because it uses a mysterious base language of reality to speak.</p>
+    <p>More recently, I led a food and beverage company's hardware redesign because it meant translating between the world of engineering and the direct satisfaction of a customer, bringing me closer to others. I use percussion to speak musically because it's more complex than any other musical layer and ties intimately to the human physical language of dance and movement. The languages of connection are what it's all for, for me.</p>
+    <p class="lede" style="margin-top:32px; margin-bottom:0; max-width:none;">I don't want to compartmentalize what I do; I want to put it all out there.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <h2>for the record</h2>
+    <div class="record">
+
+      <div class="r">
+        <div class="k">Education</div>
+        <div class="v">
+          <span class="t">BSEE 2017 &nbsp;·&nbsp; MSEE 2019 &mdash; The University of Texas at Austin</span>
+          Concentration in signal processing. MSEE thesis: <em>Quantum Information Processing Approaches in Classical Systems</em>, advised by Robert W. Heath Jr. and Brian La Cour.
+        </div>
+      </div>
+
+      <div class="r">
+        <div class="k">Research</div>
+        <div class="v">
+          <span class="t">Center for Quantum Research, Applied Research Laboratories: UT &nbsp;·&nbsp; 2016&ndash;2025</span>
+          Evaluating emerging quantum technology &mdash; making ordinary classical systems reproduce quantum behavior closely enough to be useful.
+          <ul>
+            <li>Classical stochastic models of the entangled resource states that fusion-based quantum computing is built from</li>
+            <li>Quantum-inspired algorithms with applications to wireless communication</li>
+            <li>Quantum error-correcting code optimization</li>
+            <li>The embedded, sensor and PCB design underneath all of it, including specifying eval boards, PCB equipment and signal generators</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="r">
+        <div class="k">Publications</div>
+        <div class="v">
+          <div class="item">
+            <span class="t">15+ conference and journal publications</span>
+            IEEE QCE, ISSCC, MILCOM, CISS, ICRC, CICC and Optica Quantum 2.0; <em>IEEE Open Journal of the Communications Society</em>, <em>Applied Mathematical Modelling</em>, and the <em>Journal of Physics Communications</em>.
+          </div>
+          <div class="item">
+            <span class="t">Patent US 11,218,195 B2 &mdash; Space-time encoding in wireless communication systems</span>
+            A multi-antenna protocol for highly resource-constrained environments, built from the principles of quantum error correction.
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="links-row">
+      <a href="https://scholar.google.com/citations?user=W6Gd4ZUAAAAJ&amp;hl=en">google scholar &rarr;</a>
+      <a href="work.html">full work history &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="work">
+  <div class="wrap">
+    <h2>case study — redesign</h2>
+    <p class="lede">Converting a keg-based commercial coffee system line to post-mix, unlocking a market ten times larger.</p>
+    <p>In early 2025, I came on as engineering lead for a small partnership redesigning commercial beverage dispensing hardware. The existing system was keg-based — nitrogen tanks, pressure-fed tubing — which only worked in buildings of <strong>250+ units</strong>: towers and large apartment complexes.</p>
     <p>Working directly between the people who understood the deployment problem and the manufacturing constraints, I led the redesign to a <strong>post-mix architecture</strong> — concentrate brewed and mixed on the spot, in a smaller form factor. That single change dropped the minimum viable deployment down to <strong>50+ unit buildings</strong>: small apartments, banks, doctor's offices — an addressable market roughly ten times larger than before.</p>
+    <p>First units are in the field and the design is production-ready.</p>
     <div class="stat-row">
       <div class="stat"><span class="num">10x</span><span class="label">addressable market</span></div>
       <div class="stat"><span class="num">250→50</span><span class="label">min. unit size unlocked</span></div>
@@ -86,10 +176,27 @@
   </div>
 </section>
 
-<section class="block alt">
+<section class="block" id="channel">
   <div class="wrap">
-    <h2>for the record</h2>
-    <p>The University of Texas at Austin — BSEE, MSEE. Eight years doing quantum computing research at Applied Research Laboratories UT: sponsor-backed work, academic publication, and evaluation of emerging quantum technology. One patent, for a wireless communication protocol for highly resource-constrained environments.</p>
+    <h2>AI and teaching</h2>
+    <p>I started a YouTube channel to communicate complex subjects to a wide audience in a way that my expertise in the sciences can benefit others. A major goal with the project is developing AI fluency — the videos are AI-assisted in the graphic design and research stages.</p>
+    <p>Right now I review scientific papers on quantum optics. In preparation are series exploring papers from the early experiments of quantum mechanics, to get a better sense of how early thinkers approached problems, beyond the textbook presentation of the ideas.</p>
+    <div class="embeds">
+      <div class="embed-slot">
+        <iframe style="aspect-ratio:16/9; height:auto;" src="https://www.youtube.com/embed/VG1BTAqwlvg" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="links-row">
+      <a href="https://www.youtube.com/@quantumcomputingreview">@quantumcomputingreview &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="synth">
+  <div class="wrap">
+    <h2>case study — modular synthesis</h2>
+    <p class="lede">Creating musical systems as richly interdependent as our modern world.</p>
+    <p>I was the firmware engineer on a quad envelope generator &mdash; four ADSR channels on a Microchip PIC32, where the channels modulate and trigger each other instead of simply running side by side. That cross-coupling is the whole design: it turns four ordinary envelopes into a system whose behavior you discover rather than specify, and the demos found gestures none of us had planned for. Hardware engineer and product engineer in the other two seats; SPI, I2C and UART throughout.</p>
   </div>
 </section>
 
@@ -99,33 +206,28 @@
     <p class="lede">Music is the search for unity and connection.</p>
     <p>Electronic music is <em>the</em> music of the modern subject. My musical work concentrates in minimal house and techno, and this is an area that's uniquely able to synthesize free expression and organic rhythm with repetition, causality, process, and modular, industrialized thinking. I have releases and remixes featured on underground labels throughout the world, and play frequently at my local venues with the intention of exposing the scene to sounds that reflect how we hear the world in 2026 and beyond.</p>
     <div class="embeds">
-      <div class="embed-slot">// embed a SoundCloud or YouTube player here — paste their iframe embed code in place of this block</div>
+      <div class="embed-slot">
+        <iframe style="aspect-ratio:16/9; height:auto;" src="https://www.youtube.com/embed/uOi_S2DjPr0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
     </div>
     <div class="links-row">
-      <a href="sound.html">sets, releases, label →</a>
+      <a href="sound.html">sets and releases →</a>
     </div>
   </div>
 </section>
 
-<section class="block alt" id="channel">
-  <div class="wrap">
-    <h2>the channel</h2>
-    <p>I started a YouTube channel to communicate complex subjects to a wide audience in a way that my expertise in the sciences can benefit others. A major goal with the project is developing AI fluency — the videos are AI-assisted in the graphic design and research stages.</p>
-    <p>Right now I review scientific papers on quantum optics. In preparation are series exploring papers from the early experiments of quantum mechanics, to get a better sense of how early thinkers approached problems, beyond the textbook presentation of the ideas.</p>
-    <div class="links-row">
-      <a href="https://www.youtube.com/@quantumcomputingreview">[YouTube channel]</a>
-    </div>
-  </div>
-</section>
-
-<section class="block" id="about">
+<section class="block alt" id="about">
   <div class="wrap">
     <p>None of this happens in a vacuum. I care about meeting people across genuinely different backgrounds.</p>
+    <div class="links-row">
+      <a href="#contact">let's talk &rarr;</a>
+    </div>
   </div>
 </section>
 
 <section class="timeline">
   <div class="wrap">
+    <h2>roles</h2>
     <div class="row">
       <span class="role">E N G I N E E R I N G&nbsp;&nbsp;L E A D</span>
       <span class="org">Sky High Cold Brew</span>
@@ -138,7 +240,7 @@
     </div>
     <div class="row">
       <span class="role">M U S I C&nbsp;&nbsp;P R O D U C E R&nbsp;&nbsp;/&nbsp;&nbsp;D J</span>
-      <span class="org">[ARTIST / LABEL NAME]</span>
+      <span class="org">Andrea Z</span>
       <span class="yr">2015–present</span>
     </div>
     <div class="more"><a href="resume.html">full work history in resume →</a></div>
@@ -148,15 +250,16 @@
 <footer id="contact">
   <div class="wrap">
     <h2>Let's talk.</h2>
-    <p>Let's start a conversation — I'll hear your ideas.</p>
+    <p>Let's start a conversation.</p>
     <div class="contact-links">
-      <a href="mailto:[email protected]">email</a>
-      <a href="#">linkedin</a>
-      <a href="#">instagram</a>
+      <a href="mailto:andrewlanham55@gmail.com">email</a>
+      <a href="https://www.linkedin.com/in/andrew-lanham-354ba7b7/">linkedin</a>
+      <a href="https://scholar.google.com/citations?user=W6Gd4ZUAAAAJ&amp;hl=en">scholar</a>
+      <a href="https://www.instagram.com/andrea.z.us/">instagram</a>
       <a href="resume.pdf">resume (pdf)</a>
       <a href="contact.html">contact</a>
     </div>
-    <div class="fineprint">[YOUR NAME] · built and hosted for $0</div>
+    <div class="fineprint">Andrew Lanham · built and hosted for $0</div>
   </div>
 </footer>
 
