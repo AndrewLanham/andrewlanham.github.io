@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>resume — Andrew Lanham</title>
+<title>skills — Andrew Lanham</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="site.css">
@@ -11,70 +11,30 @@
   /* SIGNATURE — HANGING LABEL GRID.
      Every row carries its label in a fixed left column, so the page reads
      as one continuous ruled sheet. Used on this page only. */
-  .cv{padding:64px 0 40px;}
+  .cv{padding:56px 0 40px;}
   .cv .row{
-    display:grid; grid-template-columns:108px 1fr; gap:0 32px;
-    padding:22px 0; border-top:1px solid var(--line);
+    display:grid; grid-template-columns:132px 1fr; gap:0 32px;
+    padding:24px 0; border-top:1px solid var(--line);
   }
   .cv .row:first-of-type{border-top:none;}
   .cv .label{
     font-family:var(--mono); font-size:11px; letter-spacing:0.08em;
     color:var(--accent); text-transform:uppercase; padding-top:5px;
   }
-  .cv h3{font-size:1.02rem; font-weight:500; margin-bottom:2px;}
-  .cv .meta{font-family:var(--mono); font-size:12px; color:var(--muted); margin-bottom:10px;}
-  .cv p{color:var(--muted); font-size:0.96rem; max-width:62ch; margin-bottom:10px;}
-  .cv ul{color:var(--muted); font-size:0.96rem; max-width:62ch; margin:0 0 10px 18px;}
-  .cv li{margin-bottom:6px;}
-  .cv li strong, .cv p strong{color:var(--text); font-weight:500;}
-  .cv .item + .item{margin-top:22px;}
-
-  .cv-head{padding:96px 0 36px;}
-  .cv-head h1{font-size:clamp(1.9rem,4.5vw,2.6rem); font-weight:500; margin-bottom:10px;}
-  .cv-head .tagline{color:var(--muted); max-width:58ch; margin-bottom:20px;}
-  .cv-head .line{
-    font-family:var(--mono); font-size:12.5px; color:var(--muted);
-    display:flex; flex-wrap:wrap; gap:6px 18px;
-  }
-  .cv-head .line a{color:var(--muted);}
-  .cv-head .line a:hover{color:var(--accent);}
+  .cv .v{color:var(--muted); font-size:0.96rem; max-width:60ch;}
+  .cv .v strong{color:var(--text); font-weight:500;}
+  .cv .v .items{color:var(--text); margin-bottom:8px;}
+  .cv .v .where{display:block; font-size:0.9rem;}
 
   .getpdf{
-    margin-top:26px; font-family:var(--mono); font-size:12px;
-    display:flex; gap:18px; flex-wrap:wrap;
+    margin-top:28px; font-family:var(--mono); font-size:13px;
+    display:flex; gap:20px; flex-wrap:wrap;
   }
   .getpdf a{color:var(--accent);}
 
   @media (max-width:640px){
     .cv .row{grid-template-columns:1fr; gap:0;}
     .cv .label{padding-top:0; margin-bottom:10px;}
-  }
-
-  /* PRINT — one page on white. Cmd/Ctrl-P produces the PDF. */
-  @media print{
-    @page{size:letter; margin:14mm 16mm;}
-    html, body{background:#fff !important; color:#111 !important; font-size:10pt; line-height:1.42;}
-    nav, footer, .getpdf, .noprint{display:none !important;}
-    a{color:#111 !important; text-decoration:none;}
-    .wrap{max-width:none; padding:0;}
-    .cv-head{padding:0 0 12pt;}
-    .cv-head h1{font-size:19pt; margin-bottom:4pt;}
-    .cv-head .tagline{color:#333 !important; max-width:none; margin-bottom:7pt; font-size:10pt;}
-    .cv-head .line{color:#444 !important; font-size:8.6pt; gap:3pt 12pt;}
-    .cv-head .line a{color:#444 !important;}
-    .cv{padding:0;}
-    .cv .row{
-      grid-template-columns:78pt 1fr; gap:0 14pt;
-      padding:9pt 0; border-top:0.5pt solid #bbb;
-      break-inside:avoid; page-break-inside:avoid;
-    }
-    .cv .label{color:#111 !important; font-size:7.6pt; padding-top:2pt;}
-    .cv h3{font-size:10.5pt; margin-bottom:1pt;}
-    .cv .meta{color:#555 !important; font-size:8.6pt; margin-bottom:4pt;}
-    .cv p, .cv ul{color:#222 !important; font-size:9.4pt; max-width:none; margin-bottom:4pt;}
-    .cv li{margin-bottom:2pt;}
-    .cv li strong, .cv p strong{color:#000 !important; font-weight:600;}
-    .cv .item + .item{margin-top:8pt;}
   }
 </style>
 </head>
@@ -86,121 +46,81 @@
     <div class="links">
       <a href="work.html">work</a>
       <a href="sound.html">sound</a>
-      <a href="index.html#about">about</a>
-      <a href="resume.html" class="here">resume</a>
+      <a href="index.html#mission">about</a>
+      <a href="resume.html" class="here">skills</a>
+      <a href="resume.pdf">resume (pdf)</a>
       <a href="contact.html">contact</a>
     </div>
   </div>
 </nav>
 
-<div class="cv-head">
+<header class="hero">
   <div class="wrap">
-    <h1>Andrew Lanham</h1>
-    <p class="tagline">[One line: what you do and what you're looking for. e.g. Electrical engineer, quantum hardware and RF systems. Open to technical program management, applications engineering, solutions roles.]</p>
-    <div class="line">
-      <a href="mailto:andrewlanham55@gmail.com">andrewlanham55@gmail.com</a>
-      <span>[CITY, STATE]</span>
-      <a href="https://www.linkedin.com/in/andrew-lanham-354ba7b7/">linkedin.com/in/andrew-lanham-354ba7b7</a>
-      <a href="index.html">[yoursite.com]</a>
-    </div>
+    <div class="eyebrow">skills</div>
+    <h1>The tools, and where I used them.</h1>
+    <p class="sub">Embedded firmware, PCB design, signal processing, quantum research, and writing specifications for other people's engineering teams.</p>
     <div class="getpdf">
-      <a href="resume.pdf">download pdf</a>
+      <a href="resume.pdf">download the resume (pdf) &rarr;</a>
     </div>
   </div>
-</div>
+</header>
 
 <div class="cv">
   <div class="wrap">
 
     <div class="row">
-      <div class="label">Experience</div>
-      <div>
-        <div class="item">
-          <h3>Engineering Lead · Hardware redesign</h3>
-          <div class="meta">Sky High Cold Brew · [CITY] · 2025–present</div>
-          <ul>
-            <li>Led the conversion of a keg-based commercial dispensing system to a <strong>post-mix architecture</strong>, dropping the minimum viable deployment from <strong>250+ unit</strong> buildings to <strong>50+</strong>.</li>
-            <li>[What you specified: pumps, valves, controller, enclosure, vendor and tooling decisions.]</li>
-            <li>[Working between the deployment side and manufacturing — how many people, what cadence.]</li>
-          </ul>
-        </div>
-        <div class="item">
-          <h3>Engineering Scientist · Quantum computing research</h3>
-          <div class="meta">Center for Quantum Research, Applied Research Laboratories: UT · Austin, TX · 2019–2025</div>
-          <ul>
-            <li>Sponsor-backed research, academic publication, and evaluation of emerging quantum technology.</li>
-            <li>[What you built or measured, with the number that makes it real.]</li>
-            <li>[Scope: how many people, whose hardware, what review cadence.]</li>
-          </ul>
-        </div>
-        <div class="item">
-          <h3>Modular synthesizer component design</h3>
-          <div class="meta">[PROJECT / BRAND] · [20XX–20XX]</div>
-          <ul>
-            <li>Embedded systems design for modular synthesizers; built new technology for generation and sequencing.</li>
-            <li>[Which modules, and what wasn't possible before.]</li>
-          </ul>
-        </div>
-        <div class="item">
-          <h3>[TITLE] · Wireless communication</h3>
-          <div class="meta">[COMPANY / LAB] · [CITY] · [20XX–20XX]</div>
-          <ul>
-            <li>[What you owned — RF front end, link budgets, protocol work, test automation.]</li>
-            <li>[Result with a number.]</li>
-          </ul>
-        </div>
+      <div class="label">Embedded</div>
+      <div class="v">
+        <div class="items">PIC32 &nbsp;·&nbsp; STM32F4 &nbsp;·&nbsp; C / C++ &nbsp;·&nbsp; I2C &nbsp;·&nbsp; SPI &nbsp;·&nbsp; UART &nbsp;·&nbsp; real-time digital I/O &nbsp;·&nbsp; DAC control</div>
+        <span class="where">Complete firmware for a modular synthesizer module on PIC32, including the multi-mode user interface and the I2C DAC driving the analog output stages. Embedded and sensor design on STM32F4 at Applied Research Laboratories. Embedded control in the beverage dispensing product.</span>
       </div>
     </div>
 
     <div class="row">
-      <div class="label">Education</div>
-      <div>
-        <div class="item">
-          <h3>MSEE, Electrical Engineering</h3>
-          <div class="meta">The University of Texas at Austin · [20XX]</div>
-          <p>[Focus area, thesis title if it's relevant to the work you want.]</p>
-        </div>
-        <div class="item">
-          <h3>BSEE, Electrical Engineering</h3>
-          <div class="meta">The University of Texas at Austin · [20XX]</div>
-        </div>
+      <div class="label">Hardware</div>
+      <div class="v">
+        <div class="items">PCB design &nbsp;·&nbsp; analog front ends &nbsp;·&nbsp; sensor design &nbsp;·&nbsp; mechanical prototyping &nbsp;·&nbsp; eval boards &nbsp;·&nbsp; supplier and manufacturing coordination</div>
+        <span class="where">Board and analog design for quantum systems evaluation. On the dispensing product line: pump, valve and mixing chamber integration, mechanical prototyping, and the supply and manufacturing chain behind it.</span>
       </div>
     </div>
 
     <div class="row">
-      <div class="label">Patent</div>
-      <div>
-        <p><strong>US 11,218,195 B2</strong> — Space-time encoding in wireless communication systems.</p>
+      <div class="label">Software</div>
+      <div class="v">
+        <div class="items">Python &nbsp;·&nbsp; MATLAB &nbsp;·&nbsp; C / C++</div>
+        <span class="where">Simulation and analysis software, and library design for signal processing and statistical benchmarking.</span>
       </div>
     </div>
 
     <div class="row">
-      <div class="label">Publications</div>
-      <div>
-        <ul>
-          <li>[Authors]. "[Title]." <em>[Venue]</em>, [20XX].</li>
-          <li>[Authors]. "[Title]." <em>[Venue]</em>, [20XX].</li>
-          <li>[Authors]. "[Title]." <em>[Venue]</em>, [20XX].</li>
-        </ul>
+      <div class="label">Signal processing</div>
+      <div class="v">
+        <div class="items">space-time block coding &nbsp;·&nbsp; detection strategies &nbsp;·&nbsp; noise modeling &nbsp;·&nbsp; Gaussian statistics &nbsp;·&nbsp; post-selection &nbsp;·&nbsp; Bayesian inference</div>
+        <span class="where">MSEE concentration. New wireless communication algorithms in space-time block coding, designed and validated in MATLAB and Python. One patent.</span>
       </div>
     </div>
 
     <div class="row">
-      <div class="label">Tools</div>
-      <div>
-        <p><strong>Hardware</strong> — [instruments, test gear, fab or assembly processes, CAD.]</p>
-        <p><strong>Software</strong> — [languages, simulation, data analysis, whatever you actually use weekly.]</p>
+      <div class="label">Quantum</div>
+      <div class="v">
+        <div class="items">quantum error correction &nbsp;·&nbsp; quantum emulation &nbsp;·&nbsp; resource-state simulation &nbsp;·&nbsp; quantum-inspired algorithms &nbsp;·&nbsp; benchmarking against quantum devices</div>
+        <span class="where">At the Center for Quantum Research, working the quantum&ndash;classical boundary: applying error correction to classical analog computing, and benchmarking analog and digital systems against quantum hardware.</span>
       </div>
     </div>
 
     <div class="row">
-      <div class="label">Music</div>
-      <div>
-        <div class="item">
-          <h3>Andrea Z</h3>
-          <div class="meta">Music producer / DJ · 2015–present</div>
-          <p>Minimal house and techno. Releases and remixes on underground labels throughout the world; regular sets at local venues. More on the <a href="sound.html">sound page</a>.</p>
-        </div>
+      <div class="label">Specification</div>
+      <div class="v">
+        <div class="items">technical specifications &nbsp;·&nbsp; interface definition &nbsp;·&nbsp; requirements documentation &nbsp;·&nbsp; stakeholder validation &nbsp;·&nbsp; Word &nbsp;·&nbsp; Excel</div>
+        <span class="where">Authored the end-to-end technical specification for a non-custodial digital asset exchange backend and custody system, working from conversations with the project engineers. Mathematically modeled and documented the core logic so external engineering teams and stakeholders could validate it.</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="label">Published</div>
+      <div class="v">
+        <div class="items">ISSCC &nbsp;·&nbsp; IEEE QCE &nbsp;·&nbsp; MILCOM &nbsp;·&nbsp; CISS &nbsp;·&nbsp; ICRC &nbsp;·&nbsp; CICC &nbsp;·&nbsp; Optica Quantum 2.0</div>
+        <span class="where">Journals: <em>Applied Mathematical Modelling</em>, <em>IEEE Open Journal of the Communications Society</em>, <em>Journal of Physics Communications</em>. Full list on <a href="https://scholar.google.com/citations?user=W6Gd4ZUAAAAJ&amp;hl=en">Google Scholar</a>, selections on the <a href="work.html">work page</a>.</span>
       </div>
     </div>
 
@@ -211,8 +131,9 @@
   <div class="wrap">
     <div class="contact-links">
       <a href="mailto:andrewlanham55@gmail.com">email</a>
-      <a href="contact.html">contact</a>
       <a href="resume.pdf">resume (pdf)</a>
+      <a href="work.html">work</a>
+      <a href="contact.html">contact</a>
     </div>
     <div class="fineprint">Andrew Lanham · built and hosted for $0</div>
   </div>

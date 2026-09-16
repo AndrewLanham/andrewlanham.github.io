@@ -3,3 +3,6 @@
 # readable at https://infopoison.github.io/<path>. Keep it that way.
 PRIVATE/
 .DS_Store
+
+# Claude desktop drops delivered files here; not part of the site.
+Claude outputs/
