@@ -1,6 +1,6 @@
 # Anything under PRIVATE/ is notes-only and must never be published.
 # This repo is served publicly by GitHub Pages: every committed file is
-# readable at https://infopoison.github.io/<path>. Keep it that way.
+# readable at https://andrewlanham.github.io/<path>. Keep it that way.
 PRIVATE/
 .DS_Store
 
