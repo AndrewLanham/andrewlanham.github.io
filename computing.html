@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>computing — Andrew Lanham</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<style>
+  /* SIGNATURE — CROSSINGS.
+     Each row pairs an idea with a structure it turned up in, joined by a
+     two-way mono arrow in the accent color. Used on this page only. */
+  .crossings{margin-top:32px; max-width:680px;}
+  .cross{
+    display:grid; grid-template-columns:1fr 32px 1fr; gap:0 16px;
+    align-items:baseline;
+    padding:22px 0; border-top:1px solid var(--line);
+  }
+  .cross:last-child{border-bottom:1px solid var(--line);}
+  .cross .from, .cross .to{
+    font-family:var(--mono); font-size:13px; color:var(--text); line-height:1.45;
+  }
+  .cross .arrow{
+    font-family:var(--mono); font-size:14px; color:var(--accent); text-align:center;
+  }
+  .cross .note{
+    grid-column:1 / -1; color:var(--muted); max-width:58ch;
+    margin-top:10px; font-size:0.95rem;
+  }
+  .cross .ref{
+    grid-column:1 / -1; font-family:var(--mono); font-size:11.5px;
+    color:var(--accent); margin-top:6px;
+  }
+
+  @media (max-width:640px){
+    .cross{grid-template-columns:1fr; gap:0;}
+    .cross .arrow{text-align:left; margin:4px 0;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="mark"><a href="index.html">Andrew Lanham</a></div>
+    <div class="links">
+      <a href="work.html">work</a>
+      <a href="computing.html" class="here">computing</a>
+      <a href="resume.html">skills</a>
+      <a href="index.html#mission">about</a>
+      <a href="sound.html">sound</a>
+      <a href="contact.html">contact</a>
+      <a href="resume.pdf">resume (pdf)</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">computing</div>
+    <h1>Notes from 9 years at the quantum&ndash;classical boundary.</h1>
+    <p class="sub">Where protocols keep turning up in hardware they're not built for.</p>
+  </div>
+</header>
+
+<section class="block">
+  <div class="wrap">
+    <h2>the open question</h2>
+    <p class="lede">Digital computing has clear rules. Everything else is still fuzzy.</p>
+    <p>We know how digital computers scale, where they break, and what they cost. Analog, quantum, stochastic, in-memory, and other compute paradigms all promise something better, but where or when any of them actually excel isn't always clear. Most claims rest on one benchmark, one problem size, or a comparison against a single classical method.</p>
+    <p>Much of my research circles this question &mdash; what a given physical system can really compute, and how you'd know.</p>
+  </div>
+</section>
+
+<section class="block alt">
+  <div class="wrap">
+    <h2>algorithms travel</h2>
+    <p class="lede">The same ideas keep working in structures they weren't designed for.</p>
+    <p>Categories leak in every direction. These are crossings I worked on directly.</p>
+
+    <div class="crossings">
+
+      <div class="cross">
+        <span class="from">quantum resource states</span>
+        <span class="arrow">&harr;</span>
+        <span class="to">classical stochastic states + post-selection</span>
+        <p class="note">The entangled states fusion-based quantum computing is built from, reproduced with classical statistics: 94.7% fidelity on a four-star state, 70.6% on an eight-qubit GHZ state.</p>
+        <span class="ref">QCE 2024 · Optica Quantum 2.0 2024</span>
+      </div>
+
+      <div class="cross">
+        <span class="from">quantum error correction</span>
+        <span class="arrow">&harr;</span>
+        <span class="to">analog electronic hardware</span>
+        <p class="note">Error-correcting codes built for qubits, used to improve the performance of a classical analog device.</p>
+        <span class="ref">Journal of Physics Communications 2019</span>
+      </div>
+
+      <div class="cross">
+        <span class="from">mathematical structure of a quantum computer</span>
+        <span class="arrow">&harr;</span>
+        <span class="to">analog emulation hardware</span>
+        <p class="note">Analog circuits standing in for qubits, and running that emulation in parallel.</p>
+        <span class="ref">CICC 2017 · ICRC 2018 · QCE 2020</span>
+      </div>
+
+      <div class="cross">
+        <span class="from">quantum error correction</span>
+        <span class="arrow">&harr;</span>
+        <span class="to">wireless communication</span>
+        <p class="note">A wireless communication coding scheme derived from a quantum error correction code.</p>
+        <span class="ref">CISS 2019 · IEEE OJ-COMS 2021 · MILCOM 2022 · US 11,218,195 B2</span>
+      </div>
+
+      <div class="cross">
+        <span class="from">quantum algorithms</span>
+        <span class="arrow">&harr;</span>
+        <span class="to">classical digital solvers</span>
+        <p class="note">A quantum-inspired classical solver for Boolean satisfiability problems.</p>
+        <span class="ref">QCE 2021 · arXiv 2212.04016</span>
+      </div>
+
+      <div class="cross">
+        <span class="from">combinatorial solvers</span>
+        <span class="arrow">&harr;</span>
+        <span class="to">compute-in-memory silicon</span>
+        <p class="note">Solver architectures for an all-digital compute-in-memory chip for large satisfiability problems.</p>
+        <span class="ref">ISSCC 2023 · Snap-SAT</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <h2>the boundary moves</h2>
+    <p class="lede">Where quantum ends and classical begins isn't fixed.</p>
+    <p>Google's 2019 quantum supremacy experiment drew a line: a task its processor finished in minutes, estimated to take a classical supercomputer thousands of years. Better classical simulation methods then cut that estimate dramatically. The line didn't vanish, but it moved, and it will move again.</p>
+    <p>Results like the ones above move it too, from the classical side &mdash; every time an ordinary system reproduces something that looked uniquely quantum.</p>
+  </div>
+</section>
+
+<section class="block alt">
+  <div class="wrap">
+    <h2>what comes out</h2>
+    <p class="lede">Right now it's a big jumble, and we're waiting to see what comes out of it.</p>
+    <p>Nobody has sorted out which mix of analog, quantum, stochastic and digital processing ends up useful, or for what. Getting there takes people willing to carry ideas across substrates and test them honestly, including reporting when something doesn't hold up. That's the work I like, and it's what I try to explain on my channel.</p>
+    <div class="links-row">
+      <a href="work.html">full work history &rarr;</a>
+      <a href="https://scholar.google.com/citations?user=W6Gd4ZUAAAAJ&amp;hl=en">google scholar &rarr;</a>
+      <a href="https://www.youtube.com/@quantumcomputingreview">@quantumcomputingreview &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="contact-links">
+      <a href="mailto:andrewlanham55@gmail.com">email</a>
+      <a href="resume.pdf">resume (pdf)</a>
+      <a href="work.html">work</a>
+      <a href="contact.html">contact</a>
+    </div>
+    <div class="fineprint">Andrew Lanham · built and hosted for $0</div>
+  </div>
+</footer>
+
+</body>
+</html>
